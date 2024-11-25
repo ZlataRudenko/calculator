@@ -9,15 +9,9 @@ class Main {
             String input = scanner.nextLine();
             String result = calc(input);
             System.out.println("Ответ: " + result);
-        }
-        catch (NumberFormatException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Ошибка: Введите числа в корректном формате (например, 1 + 2)");
-        }
-        catch (ArithmeticException e) {
-            System.out.println("Ошибка: Деление на ноль");
-        }
-
-        catch (Exception e) {
+        }  catch (Exception e) {
             System.out.println("Ошибка");
         }
     }
@@ -33,9 +27,7 @@ class Main {
         String operator = parts[1];
 
         if (a < 1 || a > 10 || b < 1 || b > 10) {
-            throw new Exception("Числа должны быть от 1 до 10 включительно");}
-        {
-
+            throw new Exception("Числа должны быть от 1 до 10 включительно");
         }
         int result;
         switch (operator) {
